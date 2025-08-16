@@ -1,0 +1,58 @@
+<div class="text-center">
+  <div class="card p-4" style="max-width: 800px; margin: 0 auto;">
+    <h2 class="mb-4">Your Birth Stone: <%= @birth_stone.crystal %></h2>
+    
+    <div class="birth-stone-info">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="info-section mb-4">
+            <h3 class="text-primary mb-3"><%= @birth_stone.crystal %></h3>
+            <p class="lead mb-3">Your birth stone for <%= @birth_stone.month %></p>
+            
+            <div class="stone-details">
+              <div class="detail-item mb-3">
+                <strong>Color:</strong> <%= @birth_stone.colour %>
+              </div>
+              
+              <div class="detail-item mb-3">
+                <strong>Origin:</strong> <%= @birth_stone.origin %>
+              </div>
+              
+              <div class="detail-item mb-3">
+                <strong>Properties:</strong> <%= @birth_stone.properties %>
+              </div>
+              
+              <div class="detail-item mb-3">
+                <strong>Associated Stones:</strong> <%= @birth_stone.associated_stones %>
+              </div>
+              
+              <% if @birth_stone.extra_details.present? %>
+                <div class="detail-item mb-3">
+                  <strong>Additional Information:</strong> <%= @birth_stone.extra_details %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="stone-image-section">
+            <div class="placeholder-image mb-3">
+              <div class="placeholder-content">
+                <i class="gem-icon">💎</i>
+                <p>Image of <%= @birth_stone.crystal %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-4">
+      <div class="navigation-buttons">
+        <%= link_to "Try Another Date", root_path, class: "btn btn-primary" %>
+        <%= link_to "Learn More About Birth Stones", "#", class: "btn btn-outline-secondary ml-2" %>
+      </div>
+    </div>
+  </div>
+</div>

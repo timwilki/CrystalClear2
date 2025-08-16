@@ -1,0 +1,451 @@
+/* Birth Stone Application Styles */
+
+/* Gemstone-themed color palette */
+:root {
+  --primary-purple: #6a4c93;
+  --primary-blue: #4a90e2;
+  --primary-green: #7ed321;
+  --primary-gold: #f5a623;
+  --primary-red: #d0021b;
+  --primary-turquoise: #50e3c2;
+  --primary-amber: #f8b500;
+  --primary-diamond: #f8f9fa;
+  --primary-obsidian: #2c3e50;
+  --primary-opal: #9b59b6;
+  --primary-aquamarine: #87ceeb;
+  --primary-ruby: #e74c3c;
+  
+  --text-dark: #2c3e50;
+  --text-light: #7f8c8d;
+  --background-light: #f8f9fa;
+  --background-white: #ffffff;
+  --border-light: #ecf0f1;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+  min-height: 100vh;
+}
+
+/* Container and layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  /* Homepage form responsive improvements */
+  .card {
+    margin: 0 10px;
+  }
+  
+  .form-control {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 14px 16px; /* Larger touch targets */
+  }
+  
+  .btn {
+    padding: 14px 20px; /* Larger touch targets */
+    min-height: 44px; /* iOS minimum touch target */
+  }
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.p-4 {
+  padding: 2rem;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+.btn-outline-secondary {
+  background: transparent;
+  border: 2px solid var(--text-light);
+  color: var(--text-dark);
+}
+
+.btn-outline-secondary:hover {
+  background: var(--text-light);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navigation-buttons .btn {
+  min-width: 150px;
+}
+
+/* Card styles */
+.card {
+  background: var(--background-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow-light);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-light);
+}
+
+/* Alert styles */
+.alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid transparent;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--border-light);
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: var(--background-white);
+}
+
+.form-control:hover {
+  border-color: var(--primary-purple);
+  box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(106, 76, 147, 0.3);
+}
+
+/* Accessibility improvements */
+.btn:focus,
+.form-control:focus,
+select:focus {
+  outline: 2px solid var(--primary-purple);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-dark: #000000;
+    --text-light: #333333;
+    --border-light: #666666;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-primary {
+    background: var(--primary-purple);
+    border: 2px solid var(--primary-purple);
+  }
+  
+  .form-control {
+    border: 2px solid var(--text-dark);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Header styles */
+.header {
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Main content area */
+.main-content {
+  padding: 3rem 0;
+  min-height: calc(100vh - 200px);
+}
+
+/* Footer styles */
+.footer {
+  background: var(--text-dark);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+/* Birth stone results page styles */
+.birth-stone-info {
+  text-align: left;
+}
+
+.info-section h3 {
+  color: var(--primary-purple);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.stone-details {
+  background: linear-gradient(135deg, var(--background-light), #ffffff);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-purple);
+  box-shadow: 0 2px 8px var(--shadow-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.stone-details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-purple), var(--primary-blue), var(--primary-green));
+}
+
+.detail-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item strong {
+  color: var(--primary-purple);
+  display: inline-block;
+  min-width: 140px;
+}
+
+.placeholder-image {
+  background: var(--background-light);
+  border: 2px dashed var(--border-light);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.placeholder-content {
+  color: var(--text-light);
+}
+
+.gem-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.stone-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.stone-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px var(--shadow-light);
+}
+
+/* Image optimization for web */
+.stone-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.stone-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.stone-image:hover::before {
+  transform: translateX(100%);
+}
+
+/* Responsive design for results page */
+@media (max-width: 768px) {
+  .birth-stone-info .row {
+    flex-direction: column;
+  }
+  
+  .birth-stone-info .col-md-6 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .info-section h3 {
+    font-size: 1.5rem;
+  }
+  
+  .stone-details {
+    padding: 1rem;
+  }
+  
+  .detail-item strong {
+    min-width: 120px;
+  }
+  
+  /* Touch-friendly improvements for mobile */
+  .detail-item {
+    padding: 0.75rem 0;
+  }
+  
+  .navigation-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .navigation-buttons .btn {
+    min-width: 100%;
+    min-height: 48px;
+  }
+  
+  .placeholder-image {
+    padding: 1.5rem;
+  }
+  
+  .gem-icon {
+    font-size: 2.5rem;
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .header p {
+    font-size: 1rem;
+  }
+}
