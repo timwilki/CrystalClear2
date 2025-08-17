@@ -12,7 +12,7 @@ birth_stones_data = [
     properties: "Energy, Health, Wellbeing",
     associated_stones: "Jet, Milky Quartz, Rose Quartz",
     extra_details: "Garnet is known for its deep red color and is associated with passion, energy, and vitality.",
-    picture: "garnet.jpg"
+    picture: "garnet.png"
   },
   {
     month: "February",
@@ -22,7 +22,7 @@ birth_stones_data = [
     properties: "Trust, Intuition, Spirituality, Insomnia",
     associated_stones: "Hematite",
     extra_details: "Amethyst is prized for its beautiful purple hue and calming properties.",
-    picture: "amethyst.jpg"
+    picture: "Amethyst.png"
   },
   {
     month: "March",
@@ -32,7 +32,7 @@ birth_stones_data = [
     properties: "Stress Relief, Soothing, Deepening Meditative States",
     associated_stones: "Jade, Jasper",
     extra_details: "Aquamarine's name comes from the Latin words for water and sea, reflecting its ocean-like color.",
-    picture: "aquamarine.jpg"
+    picture: "Aquamarine.png"
   },
   {
     month: "April",
@@ -42,7 +42,7 @@ birth_stones_data = [
     properties: "Amplification, Strength, Positivity",
     associated_stones: "Clear Quartz, Hematite, Rutilated Quartz",
     extra_details: "Diamond is the hardest natural substance on Earth and symbolizes eternal love.",
-    picture: "diamond.jpg"
+    picture: "diamond.png"
   },
   {
     month: "May",
@@ -52,7 +52,7 @@ birth_stones_data = [
     properties: "Concentration, Purification, Health",
     associated_stones: "Beryl, Rhodonite",
     extra_details: "Amber is fossilized tree resin and often contains ancient insects or plant matter.",
-    picture: "amber.jpg"
+    picture: "Amber.png"
   },
   {
     month: "June",
@@ -62,7 +62,7 @@ birth_stones_data = [
     properties: "Stability, Divinity, Sensuality",
     associated_stones: "Agate, Blue Lace Agate, Smoky Quartz",
     extra_details: "Moonstone exhibits a beautiful adularescence that resembles moonlight.",
-    picture: "moonstone.jpg"
+    picture: "moonstone.png"
   },
   {
     month: "July",
@@ -72,7 +72,7 @@ birth_stones_data = [
     properties: "Passion, Protection, Prosperity",
     associated_stones: "Chrysoprase, Onyx, Pyrite, Yellow Fluorite",
     extra_details: "Ruby is one of the most valuable gemstones and represents love and passion.",
-    picture: "ruby.jpg"
+    picture: "ruby.png"
   },
   {
     month: "August",
@@ -82,7 +82,7 @@ birth_stones_data = [
     properties: "Good fortune, Prosperity, Inspiration, Bravery",
     associated_stones: "Carnelian, Labradorite, Peridot, Sunstone",
     extra_details: "Tiger's Eye exhibits a chatoyant effect that resembles a cat's eye.",
-    picture: "tigers_eye.jpg"
+    picture: "tigereye.png"
   },
   {
     month: "September",
@@ -92,7 +92,7 @@ birth_stones_data = [
     properties: "Good Fortune, Opportunity, Confidence",
     associated_stones: "Lapis Lazuli, Selenite",
     extra_details: "Aventurine is a form of quartz with inclusions that give it a shimmering effect.",
-    picture: "aventurine.jpg"
+    picture: "Aventurine.png"
   },
   {
     month: "October",
@@ -102,7 +102,7 @@ birth_stones_data = [
     properties: "Optimism, Reflection, Calm",
     associated_stones: "Tourmaline",
     extra_details: "Opal displays a unique play of color that changes with viewing angle.",
-    picture: "opal.jpg"
+    picture: "white-opal.png"
   },
   {
     month: "November",
@@ -112,7 +112,7 @@ birth_stones_data = [
     properties: "Self Reflection, Growth, Protection",
     associated_stones: "Citrine",
     extra_details: "Obsidian is volcanic glass and has been used for tools and weapons for thousands of years.",
-    picture: "obsidian.jpg"
+    picture: "obsidian.png"
   },
   {
     month: "December",
@@ -122,7 +122,7 @@ birth_stones_data = [
     properties: "Health, Wisdom, Protection",
     associated_stones: "Zircon",
     extra_details: "Turquoise has been prized by cultures worldwide for its distinctive blue-green color.",
-    picture: "turquoise.jpg"
+    picture: "turquoise.png"
   }
 ]
 

@@ -30,7 +30,11 @@
             { class: "form-control" } %>
       </div>
       
-      <%= form.submit "Find My Birth Stone", class: "btn btn-primary" %>
+      <div class="form-group text-center">
+        <button type="submit" class="go-button">
+          <%= image_tag "go-button.svg", alt: "Find My Birth Stone", class: "go-button-svg" %>
+        </button>
+      </div>
     <% end %>
   </div>
 </div>

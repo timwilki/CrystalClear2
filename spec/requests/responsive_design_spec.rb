@@ -7,7 +7,7 @@ RSpec.describe "Responsive Design", type: :request do
       expect(response.body).to include('class="container"')
       expect(response.body).to include('class="card p-4"')
       expect(response.body).to include('class="form-control"')
-      expect(response.body).to include('class="btn btn-primary"')
+      expect(response.body).to include('class="go-button"')
     end
 
     it "includes proper viewport meta tag" do
@@ -20,6 +20,8 @@ RSpec.describe "Responsive Design", type: :request do
       expect(response.body).to include('name="month"')
       expect(response.body).to include('name="day"')
       expect(response.body).to include('type="submit"')
+      expect(response.body).to include('go-button-')
+      expect(response.body).to include('class="go-button"')
     end
   end
 

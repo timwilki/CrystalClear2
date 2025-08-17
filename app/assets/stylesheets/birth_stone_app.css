@@ -65,6 +65,15 @@ body {
     padding: 14px 20px; /* Larger touch targets */
     min-height: 44px; /* iOS minimum touch target */
   }
+  
+  .go-button-svg {
+    width: 100px; /* Smaller on mobile */
+  }
+  
+  .go-button {
+    min-height: 44px; /* iOS minimum touch target */
+    min-width: 44px;
+  }
 }
 
 /* Utility classes */
@@ -97,6 +106,35 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+/* Go button styles */
+.go-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.go-button:hover {
+  transform: scale(1.05);
+}
+
+.go-button:active {
+  transform: scale(0.95);
+}
+
+.go-button-svg {
+  width: 120px;
+  height: auto;
+  max-width: 100%;
+ 
+}
+
+.go-button-svg:hover {
+
 }
 
 .btn:disabled {
@@ -354,19 +392,18 @@ select:focus {
   margin-bottom: 1rem;
 }
 
-.stone-image img {
-  max-width: 100%;
+.stone-image img,
+.gemstone-image {
+
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px var(--shadow-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   object-fit: cover;
   aspect-ratio: 1;
 }
 
-.stone-image img:hover {
+.stone-image img:hover,
+.gemstone-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 24px var(--shadow-light);
 }
 
 /* Image optimization for web */
@@ -390,6 +427,14 @@ select:focus {
 
 .stone-image:hover::before {
   transform: translateX(100%);
+}
+
+/* Gemstone image specific styles */
+.gemstone-image {
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Responsive design for results page */

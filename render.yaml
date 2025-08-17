@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: birth-stone-app
+    env: ruby
+    plan: starter
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec rails server"
+    envVars:
+      - key: RAILS_ENV
+        value: production
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: birth-stone-app-db
+          property: connectionString
+      - key: DATABASE_NAME
+        fromDatabase:
+          name: birth-stone-app-db
+          property: database
+      - key: DATABASE_USERNAME
+        fromDatabase:
+          name: birth-stone-app-db
+          property: user
+      - key: DATABASE_PASSWORD
+        fromDatabase:
+          name: birth-stone-app-db
+          property: password
+      - key: DATABASE_HOST
+        fromDatabase:
+          name: birth-stone-app-db
+          property: host
+      - key: DATABASE_PORT
+        fromDatabase:
+          name: birth-stone-app-db
+          property: port
+      - key: DATABASE_SSLMODE
+        value: require
+
+databases:
+  - name: birth-stone-app-db
+    databaseName: birth_stone_app_production
+    user: birth_stone_app_user
+    plan: starter

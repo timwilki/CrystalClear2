@@ -10,7 +10,7 @@ RSpec.describe "birth_stones/show.html.erb", type: :view do
       properties: "Energy, Health, Wellbeing",
       associated_stones: "Jet, Milky Quartz, Rose Quartz",
       extra_details: "Garnet is known for its deep red color and is associated with passion, energy, and vitality.",
-      picture: "garnet.jpg"
+      picture: "garnet.png"
     )
   end
 
@@ -60,7 +60,15 @@ RSpec.describe "birth_stones/show.html.erb", type: :view do
   end
 
   describe "image display" do
-    it "displays placeholder content" do
+    it "displays gemstone image when picture is present" do
+      render
+      expect(rendered).to include('class="stone-image mb-3"')
+      expect(rendered).to include('class="gemstone-image"')
+      expect(rendered).to include('src="/assets/garnet-')
+    end
+
+    it "displays placeholder when no picture is present" do
+      birth_stone.picture = nil
       render
       expect(rendered).to include('class="placeholder-image mb-3"')
       expect(rendered).to include("💎")

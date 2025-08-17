@@ -31,16 +31,18 @@ RSpec.describe "home/index.html.erb", type: :view do
       expect(rendered).to include("31")
     end
 
-    it "renders submit button" do
+    it "renders go button" do
       expect(rendered).to include("Find My Birth Stone")
       expect(rendered).to include('type="submit"')
+      expect(rendered).to include('go-button-')
+      expect(rendered).to include('class="go-button"')
     end
 
     it "applies correct CSS classes" do
       expect(rendered).to include('class="card p-4"')
       expect(rendered).to include('class="form-group"')
       expect(rendered).to include('class="form-control"')
-      expect(rendered).to include('class="btn btn-primary"')
+      expect(rendered).to include('class="go-button"')
     end
   end
 

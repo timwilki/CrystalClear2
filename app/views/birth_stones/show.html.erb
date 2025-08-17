@@ -37,12 +37,18 @@
         
         <div class="col-md-6">
           <div class="stone-image-section">
-            <div class="placeholder-image mb-3">
-              <div class="placeholder-content">
-                <i class="gem-icon">💎</i>
-                <p>Image of <%= @birth_stone.crystal %></p>
+            <% if @birth_stone.picture.present? %>
+              <div class="stone-image mb-3">
+                <%= image_tag @birth_stone.picture, alt: "#{@birth_stone.crystal} gemstone", class: "gemstone-image" %>
               </div>
-            </div>
+            <% else %>
+              <div class="placeholder-image mb-3">
+                <div class="placeholder-content">
+                  <i class="gem-icon">💎</i>
+                  <p>Image of <%= @birth_stone.crystal %></p>
+                </div>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -51,7 +57,6 @@
     <div class="mt-4">
       <div class="navigation-buttons">
         <%= link_to "Try Another Date", root_path, class: "btn btn-primary" %>
-        <%= link_to "Learn More About Birth Stones", "#", class: "btn btn-outline-secondary ml-2" %>
       </div>
     </div>
   </div>
