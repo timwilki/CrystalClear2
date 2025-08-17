@@ -32,8 +32,8 @@ production:
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   url: <%= ENV['DATABASE_URL'] %>
   database: <%= ENV['DATABASE_NAME'] || 'birth_stone_app_production' %>
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  username: <%= ENV['DATABASE_USERNAME'] || 'birth_stone_app_production_user' %>
+  password: <%= ENV['DATABASE_PASSWORD'] || 'sNCpG1D0mYWicW0FmEsAoNfJln8MYcCe' %>
   host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
   port: <%= ENV['DATABASE_PORT'] || 5432 %>
   sslmode: <%= ENV['DATABASE_SSLMODE'] || 'require' %>
