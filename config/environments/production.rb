@@ -29,6 +29,12 @@ Rails.application.configure do
   # Do not fall back to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
+  # Serve static assets (Render relies on this)
+config.public_file_server.enabled = true
+
+# If assets still 404, enable on-the-fly compilation temporarily
+config.assets.compile = true
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
 
