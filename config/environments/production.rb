@@ -33,7 +33,7 @@ Rails.application.configure do
 config.public_file_server.enabled = true
 
 # If assets still 404, enable on-the-fly compilation temporarily
-config.assets.compile = true
+config.assets.compile = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"

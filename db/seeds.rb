@@ -22,7 +22,7 @@ birth_stones_data = [
     properties: "Trust, Intuition, Spirituality, Insomnia",
     associated_stones: "Hematite",
     extra_details: "Amethyst is prized for its beautiful purple hue and calming properties.",
-    picture: "Amethyst.png"
+    picture: "amethyst.png"
   },
   {
     month: "March",
@@ -32,7 +32,7 @@ birth_stones_data = [
     properties: "Stress Relief, Soothing, Deepening Meditative States",
     associated_stones: "Jade, Jasper",
     extra_details: "Aquamarine's name comes from the Latin words for water and sea, reflecting its ocean-like color.",
-    picture: "Aquamarine.png"
+    picture: "aquamarine.png"
   },
   {
     month: "April",
@@ -52,7 +52,7 @@ birth_stones_data = [
     properties: "Concentration, Purification, Health",
     associated_stones: "Beryl, Rhodonite",
     extra_details: "Amber is fossilized tree resin and often contains ancient insects or plant matter.",
-    picture: "Amber.png"
+    picture: "amber.png"
   },
   {
     month: "June",
@@ -92,7 +92,7 @@ birth_stones_data = [
     properties: "Good Fortune, Opportunity, Confidence",
     associated_stones: "Lapis Lazuli, Selenite",
     extra_details: "Aventurine is a form of quartz with inclusions that give it a shimmering effect.",
-    picture: "Aventurine.png"
+    picture: "aventurine.png"
   },
   {
     month: "October",
