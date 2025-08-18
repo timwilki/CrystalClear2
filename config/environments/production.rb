@@ -98,8 +98,8 @@ Rails.application.configure do
   # Enable DNS rebinding protection and other `Host` header attacks.
   # Allow Render hostnames
   config.hosts << "crystalclear.onrender.com"
-  config.hosts << /.*\.onrender\.com/
-  config.hosts << ENV["RAILS_ALLOWED_HOST"] if ENV["RAILS_ALLOWED_HOST"].present?
+config.hosts << /.*\.onrender\.com/
+config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
   # Serve static files when the platform exposes them via env var
   config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
