@@ -97,7 +97,7 @@ Rails.application.configure do
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   # Allow Render hostnames
-config.hosts.clear
+config.hosts = nil
 
   # Serve static files when the platform exposes them via env var
   config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
