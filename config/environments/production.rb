@@ -97,7 +97,7 @@ Rails.application.configure do
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   # Allow Render hostnames
-  config.hosts << "crystalclear.onrender.com"
+  config.hosts << "https://crystalclear.onrender.com"
   config.hosts << /.*\.onrender\.com/
 
   # Serve static files when the platform exposes them via env var
