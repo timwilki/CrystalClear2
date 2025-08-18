@@ -96,10 +96,12 @@ Rails.application.configure do
   config.active_record.attributes_for_inspect = [ :id ]
 
   # Enable DNS rebinding protection and other `Host` header attacks.
-  # config.hosts = [
-  #   "example.com",     # Allow requests from example.com
-  #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
-  # ]
+  # Allow Render hostnames
+  config.hosts << "crystalclear.onrender.com"
+  config.hosts << /.*\.onrender\.com/
+
+  # Serve static files when the platform exposes them via env var
+  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 end
