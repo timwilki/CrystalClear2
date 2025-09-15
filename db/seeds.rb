@@ -82,7 +82,7 @@ birth_stones_data = [
     properties: "Good fortune, Prosperity, Inspiration, Bravery",
     associated_stones: "Carnelian, Labradorite, Peridot, Sunstone",
     extra_details: "Tiger's Eye exhibits a chatoyant effect that resembles a cat's eye.",
-    picture: "tigereye.png"
+    picture: "tigers_eye.png"
   },
   {
     month: "September",
@@ -126,17 +126,17 @@ birth_stones_data = [
   }
 ]
 
-# Create birth stone records
+# Create or update birth stone records (idempotent)
 birth_stones_data.each do |stone_data|
-  BirthStone.find_or_create_by!(month: stone_data[:month]) do |stone|
-    stone.crystal = stone_data[:crystal]
-    stone.colour = stone_data[:colour]
-    stone.origin = stone_data[:origin]
-    stone.properties = stone_data[:properties]
-    stone.associated_stones = stone_data[:associated_stones]
-    stone.extra_details = stone_data[:extra_details]
-    stone.picture = stone_data[:picture]
-  end
+  stone = BirthStone.find_or_initialize_by(month: stone_data[:month])
+  stone.crystal = stone_data[:crystal]
+  stone.colour = stone_data[:colour]
+  stone.origin = stone_data[:origin]
+  stone.properties = stone_data[:properties]
+  stone.associated_stones = stone_data[:associated_stones]
+  stone.extra_details = stone_data[:extra_details]
+  stone.picture = stone_data[:picture]
+  stone.save!
 end
 
 puts "Birth stone data seeded successfully!"
